@@ -1,0 +1,10 @@
+# SQL join tables
+from 
+	table_1
+inner join / left join / right join / full outer join
+ table_2 on 
+ conditions
+ 
+ # SQL aliases
+select table_name as aliases_name
+from table_name as aliases_name
