@@ -1,10 +1,81 @@
-# SQL join tables
-from 
-	table_1
-inner join / left join / right join / full outer join
- table_2 on 
- conditions
- 
- # SQL aliases
-select table_name as aliases_name
-from table_name as aliases_name
+# SQL Functions
+- SQL concatenate
+    
+    ```r
+    CONCAT(*string1*, *string2*, *....*, *string_n*)
+    
+    # eg
+    SELECT CONCAT('Hello', ' ', 'world');
+    ```
+
+- SQL type cast
+    
+    ```r
+    CAST(*expression* AS *datatype(length)*)
+    SAFE_CAST(*expression* AS *datatype(length)*) # to avoid errors
+    
+    # example
+    SELECT CAST(25.65 AS varchar);
+    ```
+
+- SQL join
+    - inner join, left, right, outer join
+    - syntax:
+    
+    ```r
+    from 
+    	table_1
+    inner join / left join / right join / full outer join
+     table_2 on 
+     conditions
+    ```
+
+- SQL temp table
+    
+    ```r
+    with temp_table_name as
+    	(select ... from ... where ...)
+    ```
+
+- SQL subqueries
+    
+    ```r
+    select
+    	...
+    	(select ... from ... where ...)
+    from 
+    	... 
+    	(select ... from ... where ...)
+    where
+    	...
+    	col_name in
+    	(select ... from ... where ...)
+    ```
+    
+- SQL cases
+    
+    ```r
+    case
+    	when condition_1
+    	then value_1
+    	when condition_2
+    	then value2_2
+    else value_3
+    end as col_name
+    
+    ```
+    
+- SQL create table
+    
+    ```r
+    CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+    ....
+    );
+    ```
+
+
+
+# SQL Commom practices
